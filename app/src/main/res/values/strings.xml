@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">themoviedb</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="nombre">nombre</string>
+    <string name="Popular">Popular</string>
+    <string name="topRated">Top</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back">back</string>
+    <string name="next">next</string>
+    <string name="page">page</string>
+    <string name="nextt">next</string>
+    <string name="paget">page</string>
+    <string name="backt">back</string>
+    <string name="backu">back</string>
+    <string name="pageu">page</string>
+
+</resources>
