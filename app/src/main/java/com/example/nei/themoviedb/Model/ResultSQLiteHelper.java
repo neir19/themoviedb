@@ -9,21 +9,11 @@ import java.util.List;
 public class ResultSQLiteHelper extends SQLiteOpenHelper {
 
     String sqlCreate= "CREATE TABLE results ("+
-            "id             INTEGER PRIMARY KEY AUTOINCREMENT, "+
-            " voteCount     STRING,"+
-            "video          BOOLEAN,"+
-            "voteCount      INTEGER,"+
-            "voteAverage    FLOAT, "+
-            "title          STRING,"+
-            "popularity     FLOAT,"+
-            //"posterPath    STRING,"+
-            "originalLanguage STRING,"+
-            "originalTitle   STRING,"+
-            "genreIds     LIST<INTEGER>,"+
-            //"backdropPath    STRING,"+
-            "adult  BOOLEAN,"+
-            "overview    STRING,"+
-            "releaseDate     STRING)";
+            "id             INTEGER PRIMARY KEY AUTOINCREMENT, "+   //0
+            "voteAverage    FLOT, "+                                //1
+            "title          STRING,"+                               //2
+            "overview       STRING,"+                               //3
+            "category       STRING)";                               //4
 
     public ResultSQLiteHelper(Context context,
                               String name,

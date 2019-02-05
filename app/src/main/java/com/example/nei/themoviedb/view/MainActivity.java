@@ -2,8 +2,6 @@ package com.example.nei.themoviedb.view;
 
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,11 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.nei.themoviedb.Model.CustomAdapter;
-import com.example.nei.themoviedb.PopularFragment;
 import com.example.nei.themoviedb.R;
-import com.example.nei.themoviedb.TopFragment;
-import com.example.nei.themoviedb.UpcomingFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,17 +33,15 @@ public class MainActivity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
 
-    private RecyclerView CustomRecyclerview;
-    private CustomAdapter adapter;
-    String ApiKey= "02e4b138dacaf8151088a361d6e75d01";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());

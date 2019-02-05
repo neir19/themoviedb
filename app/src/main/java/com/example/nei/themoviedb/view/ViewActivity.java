@@ -1,4 +1,4 @@
-package com.example.nei.themoviedb;
+package com.example.nei.themoviedb.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.nei.themoviedb.R;
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
@@ -23,7 +24,6 @@ public class ViewActivity extends AppCompatActivity {
         picture= findViewById(R.id.picture);
         Bundle arg= getIntent().getExtras();
         if( arg!= null){
-            Log.d("punt",""+arg.getString("score"));
             String URL="https://image.tmdb.org/t/p/w185_and_h278_bestv2"+arg.getString("picture");
             name.setText(arg.getString("name"));
             score.setText("Score: "+arg.getString("score"));

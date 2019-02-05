@@ -14,10 +14,6 @@
     <string name="back">back</string>
     <string name="next">next</string>
     <string name="page">page</string>
-    <string name="nextt">next</string>
-    <string name="paget">page</string>
-    <string name="backt">back</string>
-    <string name="backu">back</string>
-    <string name="pageu">page</string>
+
 
 </resources>

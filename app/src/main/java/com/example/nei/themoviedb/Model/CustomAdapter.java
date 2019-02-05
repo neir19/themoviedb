@@ -42,11 +42,7 @@ private  View.OnClickListener listener;
     public void onBindViewHolder(@NonNull CustomAdapter.CustomViewHolder holder, int position) {
         String URL= "https://image.tmdb.org/t/p/w185_and_h278_bestv2"+datalist.get(position).getPosterPath();
         holder.tname.setText(datalist.get(position).getTitle());
-        Picasso.Builder builder= new Picasso.Builder(context);
-        builder.downloader(new OkHttp3Downloader(context));
-        builder.build().load(URL)
-                .placeholder(R.drawable.ic_launcher_background)
-                .error(R.drawable.ic_launcher_background).into(holder.logo);
+        Picasso.with(context).load(URL).error(R.drawable.ic_launcher_background).into(holder.logo);
     }
 
     @Override
@@ -75,4 +71,6 @@ private  View.OnClickListener listener;
             logo    =   itemView.findViewById(R.id.logo);
         }
     }
+
+
 }

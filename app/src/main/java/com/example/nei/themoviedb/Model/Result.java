@@ -78,6 +78,7 @@ public class Result {
         this.releaseDate = releaseDate;
     }
 
+
     public Integer getVoteCount() {
         return voteCount;
     }

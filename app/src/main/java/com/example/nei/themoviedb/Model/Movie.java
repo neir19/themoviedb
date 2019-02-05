@@ -1,11 +1,14 @@
 
 package com.example.nei.themoviedb.Model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Movie {
+public class Movie implements Parcelable {
     @SerializedName("page")
     private Integer page;
     @SerializedName("total_results")
@@ -35,6 +38,7 @@ public class Movie {
         this.totalResults = totalResults;
         this.totalPages = totalPages;
         this.results = results;
+
     }
 
     public Integer getPage() {
@@ -69,4 +73,13 @@ public class Movie {
         this.results = results;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+
+    }
 }
