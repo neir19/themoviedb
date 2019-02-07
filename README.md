@@ -42,5 +42,7 @@ es un principiode programación orientada a objetos que consiste en que cada cla
 
 - Qué características tiene, según su opinión, un “buen” código o código limpio?:
 
--conciso así evitar procesos inenecesarios ni redundantes,fácil de entender se deben delegar responsabilidades para así entender con mayor facilidad que hace que
+-conciso así evitar procesos inenecesarios ni redundantes
+
+-fácil de entender, se deben delegar responsabilidades para así entender con mayor facilidad que hace que
 
