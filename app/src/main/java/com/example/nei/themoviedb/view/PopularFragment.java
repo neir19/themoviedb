@@ -60,9 +60,6 @@ public class PopularFragment extends Fragment {
         model.recyclerP(getContext(),CustomRecyclerView,getActivity(),adapter,1);
 
 
-
-
-
         return view;
 
     }
