@@ -78,6 +78,12 @@ public class Result {
         this.releaseDate = releaseDate;
     }
 
+    public Result(Integer id, Float voteAverage, String title, String overview) {
+        this.id = id;
+        this.voteAverage = voteAverage;
+        this.title = title;
+        this.overview = overview;
+    }
 
     public Integer getVoteCount() {
         return voteCount;

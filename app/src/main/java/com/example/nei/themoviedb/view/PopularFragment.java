@@ -17,7 +17,7 @@ import android.widget.ProgressBar;
 import com.example.nei.themoviedb.BuildConfig;
 import com.example.nei.themoviedb.Model.CustomAdapter;
 import com.example.nei.themoviedb.Model.Movie;
-import com.example.nei.themoviedb.PaginationAdapter;
+
 import com.example.nei.themoviedb.Model.Result;
 
 import com.example.nei.themoviedb.R;
@@ -38,7 +38,7 @@ import retrofit2.Response;
 public class PopularFragment extends Fragment {
     private RecyclerView CustomRecyclerView;
     private CustomAdapter adapter;
-    int page = 1;
+
     ProgressBar progressBar;
     MyViewmodel model= new MyViewmodel();
 

@@ -20,35 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="40dp">
 
-                <Button
-                    android:id="@+id/bbackU"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/back" />
-
-                <TextView
-                    android:id="@+id/tpageU"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:text="@string/page"
-                    android:textSize="30dp" />
-
-                <Button
-                    android:id="@+id/bnxtU"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/next" />
-
-
-            </LinearLayout>
 
 
         </LinearLayout>

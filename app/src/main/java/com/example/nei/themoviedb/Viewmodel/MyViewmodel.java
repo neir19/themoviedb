@@ -29,7 +29,7 @@ public class MyViewmodel extends ViewModel {
     int page = 1;
 
 
-    public void recyclerP(final Context context,
+    public  void recyclerP(final Context context,
                           final RecyclerView CustomRecyclerView,
                           final Activity activity,
                           final CustomAdapter adapter,
@@ -40,7 +40,6 @@ public class MyViewmodel extends ViewModel {
         call.enqueue(new Callback<Movie>() {
             @Override
             public void onResponse(Call call, Response response) {
-                //dataViewmodel= new DataViewmodel();
                 dataViewmodel.setMovie((Movie) response.body());
                 dataViewmodel.setArray((List<Result>) ((Movie) response.body()).getResults());
                 generate(context, CustomRecyclerView, activity, adapter, "popular");
@@ -68,7 +67,7 @@ public class MyViewmodel extends ViewModel {
             public void onResponse(retrofit2.Call call, Response response) {
 
 
-                //dataViewmodel= new DataViewmodel();
+
                 dataViewmodel.setMovie((Movie) response.body());
                 dataViewmodel.setArray((List<Result>) ((Movie) response.body()).getResults());
                 generate(context, CustomRecyclerView, activity, adapter, "top");
@@ -94,7 +93,7 @@ public class MyViewmodel extends ViewModel {
             @Override
             public void onResponse(retrofit2.Call call, Response response) {
 
-                //dataViewmodel= new DataViewmodel();
+
                 dataViewmodel.setMovie((Movie) response.body());
                 dataViewmodel.setArray((List<Result>) ((Movie) response.body()).getResults());
                 generate(context, CustomRecyclerView, activity, adapter, "up");
@@ -114,15 +113,18 @@ public class MyViewmodel extends ViewModel {
                          CustomAdapter adapter,
                          final String n) {
         //SQLite
-      //  table= new CreateTableViewmodel(context);
-       // table.addSQLite(dataViewmodel.getArray(),n);
+        //genera error
+        //table.addItem(dataViewmodel.getArray(),n,context);
 
         //View
-
+        Log.d("tam","size "+dataViewmodel.getArray().size());
         adapter = new CustomAdapter(dataViewmodel.getArray(), context);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(context);
         CustomRecyclerView.setLayoutManager(layoutManager);
         CustomRecyclerView.setAdapter(adapter);
+        if(page>1) {
+            CustomRecyclerView.getLayoutManager().scrollToPosition((page * 20) - 15);
+        }
         final CustomAdapter finalAdapter = adapter;
         CustomRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
